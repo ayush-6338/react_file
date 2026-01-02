@@ -1,0 +1,9 @@
+.bodycont{
+    height: 500px;
+    width: 700px;
+    background-color: aqua;
+    display : inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex justify-evenly items-center flex-col gap-2  p-4 bg-red-300">
+        <input type="text" id="name" class="border-2 border-black rounded-md px-2 py-4 text-lg" placeholder="enter your name">
+        <input type="number" id="age" class="border-2 border-black rounded-md px-2 py-4 text-lg" placeholder="enter your age">
+        <input type="text" id="occupation" class="border-2 border-black rounded-md px-2 py-4 text-lg" placeholder="enter your occupation">
+        <input type="number" id="salary" class="border-2 border-black rounded-md px-2 py-4 text-lg" placeholder="enter your salary">
+        <button onclick="{handleClick()}" class="border bg-slate-300 rounded px-4">Click to add</button>
+    </div>
+    <div id="output"></div>
+    <script>
+        var data = [];
+        function handleClick(){
+            // var inputEle =document.getElementById("name").value;
+            // console.log(inputEle);
+            // data.push(inputEle);
+            // console.log(data);
+            // document.getElementById("name").value="";
+
+            var newData = {
+                name : document.getElementById("name").value,
+                age : document.getElementById("age").value,
+                occ : document.getElementById("occupation").value,
+                sal : document.getElementById("salary").value,
+            }
+            console.log(typeof(newData));
+            data.push(newData);
+            console.log(data);
+            document.getElementById("name").value="";
+            document.getElementById("age").value="";    
+            document.getElementById("occupation").value="";
+            document.getElementById("salary").value="";
+            
+            
+
+        }
+    </script>
+</body>
+</html>

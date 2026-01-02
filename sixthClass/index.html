@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div>
+        <table id = "newTable">
+            <tr> 
+                <th class="border px-4 py-2">name</th>
+                <th class="border px-4 py-2">age</th>
+                <th class="border px-4 py-2">occupation</th>
+                <th class="border px-4 py-2">salary</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        // var data = "Hello to lovely professional university";
+        // document.getElementById("ele").innerHTML=`${data}`;
+        var element = document.getElementById("newTable"); 
+        var data = [{
+            name : "alice",
+            age : 30,
+            occupation : "Engineer" , 
+            salary : 70000
+        },{
+            name : "Bob",
+            age : 28,
+            occupation : "designer" ,
+            salary : 129999
+        }];
+        var newData = data.map(ram=>{
+            return `<tr>
+                <td class = "border px-4 py-2">${ram.name}</td>
+                <td class = "border px-4 py-2">${ram.age}</td>
+                <td class = "border px-4 py-2">${ram.occupation}</td>
+                <td class = "border px-4 py-2">${ram.salary}</td>
+            </tr>`
+        })
+        element.innerHTML += newData.join('');
+        console.log("newData type is "+ typeof(newData));
+    </script>
+</body>
+</html>

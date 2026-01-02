@@ -1,0 +1,9 @@
+.cont{
+    display: flex;
+    justify-content: space-between;
+    padding : 0px 20px;
+    background-color: rgb(145, 10, 124);
+    color: white;
+    font-size: 30px;
+    
+}
